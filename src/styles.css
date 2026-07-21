@@ -36,6 +36,7 @@ html,
 body {
   width: 100%;
   min-height: 100%;
+  overscroll-behavior: none;
 }
 
 html,
@@ -54,6 +55,9 @@ body {
     radial-gradient(circle at top, rgba(255, 130, 166, 0.26), transparent 32%),
     radial-gradient(circle at 20% 10%, rgba(157, 113, 255, 0.24), transparent 22%),
     linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 48%, var(--bg-2) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
