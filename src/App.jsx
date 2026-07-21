@@ -516,9 +516,10 @@ function App() {
       return;
     }
 
-    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    ctx.fillStyle = 'rgba(5, 4, 10, 0.14)';
-    ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
 
     const nextParticles = [];
     fireworkParticlesRef.current.forEach((particle) => {
